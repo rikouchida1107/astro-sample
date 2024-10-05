@@ -1,0 +1,21 @@
+---
+const name = "Astro";
+const red = "red";
+const items = ["a","i","u","e","o"];
+---
+
+<h1>Hello {name}!</h1>
+
+<h2 class={red}>Hello {name}!</h2>
+
+<ul>
+    {items.map ((item) => (
+        <li>{item}</li>
+    ))}
+</ul>
+
+<style>
+    .red {
+        color: red;
+    }
+</style>
