@@ -1,6 +1,7 @@
 ---
 const name = "Astro";
 const red = "red";
+const list = "list";
 const items = ["a","i","u","e","o"];
 ---
 
@@ -8,14 +9,23 @@ const items = ["a","i","u","e","o"];
 
 <h2 class={red}>Hello {name}!</h2>
 
-<ul>
+<ul class={list}>
     {items.map ((item) => (
         <li>{item}</li>
     ))}
 </ul>
 
-<style>
+<style lang="scss">
     .red {
         color: red;
+    }
+    .list {
+        display: flex;
+        font-size: 50px;
+        gap: 50px;
+        li {
+            color: antiquewhite;
+            list-style: none;
+        }
     }
 </style>
